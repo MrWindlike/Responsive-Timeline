@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.title {
+    font-size: 20px;
+    color: #47a3da;
+    margin-left: 36px;
+    margin-top: 36px;
+}
+
+.time {
+    color: #6cbfee;
+}
+
+.event {
+    border-left: 3px #afdcf8 solid;
+}
+
+.event:nth-of-type(odd) {
+    background: #6cbfee;
+}
+
+.event:nth-of-type(even) {
+    background: #3594cb;
+}

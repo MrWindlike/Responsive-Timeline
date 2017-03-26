@@ -1,0 +1,31 @@
+{
+  "keywords": [
+    "webpack"
+  ],
+  "devDependencies": {
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "sass": "^0.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "name": "responce",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "css-loader": "^0.27.3",
+    "style-loader": "^0.16.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/webpack-dev-server --open --hot --host 192.168.1.100",
+    "build": "./node_modules/.bin/webpack --config production.js --color --progress"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

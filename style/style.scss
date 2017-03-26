@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 96%;
+    margin: 0 auto;
+    padding: 3em 2em 2em;
+    max-width: 70em;
+
+    &>.title {
+        font-size: 2em;
+        font-weight: 400;
+        color: #47a3da;
+    }
+
+    @media screen and (min-width:1081px) {
+        
+    }
+    @media screen and (max-width:1080px){
+        .title{
+            text-align: center;
+        }
+    }
+}
+
+.box{
+    width: 96%;
+    max-width: 60em;
+    margin:0 auto;
+    margin-top: 2em;
+
+    &>.dateBox{
+        &>.date{
+            font-size: .9em;
+            color: #bdd0db;
+            
+        }
+    
+        &>.time {
+            color: #6cbfee;
+        }
+    }
+
+    &>.eventBox{
+        padding-bottom:1em;
+
+        &>.event {
+            padding-top: 1em;
+            border-radius: 5px;
+            position: relative;
+
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 1em;
+                height: 1em;
+                transform: rotate(45deg);
+            }
+
+            &>.eventTitle{
+                width: 95%;
+                color: white;
+                font-weight: bold;
+                margin: 0 auto;
+                padding-bottom:.2em;
+                margin-bottom:.5em;
+                border-bottom:1px rgba(255,255,255,.4) solid;
+            }
+
+            &>.eventContext{
+                color: white;
+                width: 95%;
+                margin: 0 auto;
+                padding-bottom:3em;
+            }
+        }
+    }
+
+    &:nth-of-type(even) .event{
+        background: #6cbfee;
+
+        &:before{
+            background: #6cbfee;
+        }
+    }
+    
+    &:nth-of-type(odd) .event{
+        background: #3594cb;
+
+        &:before{
+            background: #3594cb;
+        }
+    }
+
+    @media all and (min-width:1081px) {
+        .dateBox{
+            float: left;
+        }
+        .eventBox{
+            width: calc(100% - 9em);
+            margin-left: 2em;
+            padding-left: 3em;
+            border-left: 8px #afdcf8 solid;
+            float: left;
+        }
+        .event:before{
+            top: .8em;
+            left: -.5em;
+        }
+        .eventTitle{
+            font-size: 1.8em;
+        }
+        .eventContext{
+            font-size: 1.2em;
+        }
+        .date{
+            font-size: .9em;
+            margin-left:2.5em;
+        }
+        .time {
+            font-size: 2.9em;
+        }
+    }
+    @media all and (max-width:1080px) and (min-width:769px){
+        .dateBox{
+            float: left;
+            margin-left: 1.5em;
+        }
+        .eventBox{
+            width: calc(100% - 9em);
+            margin-left: 2em;
+            padding-left: 3em;
+            border-left: 8px #afdcf8 solid;
+            float: left;
+        }
+        .event:before{
+            top: .8em;
+            left: -.5em;
+        }
+        .eventTitle{
+            font-size: 1.6em;
+        }
+        .eventContext{
+            font-size: 1.2em;
+        }
+        .date{
+            font-size: .5em;
+        }
+        .time {
+            margin-left: .5em;
+            font-size: 1.5em;
+        }
+    }
+
+    @media all and (max-width:768px){
+        .dateBox{
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+        .date{
+            font-size: .5em;
+        }
+        .time {
+            font-size: 1.5em;
+        }
+        .eventBox{
+            width: calc(100% - 1.5em);
+            margin:0 auto;
+        }
+        .event{
+            margin:0 auto;
+        }
+        .event:before{
+            top: -.5em;
+            left: 1.6em;
+        }
+        .eventTitle{
+            font-size: 1.5em;
+        }
+        .eventContext{
+            font-size: 1em;
+        }
+    }
+
+}
